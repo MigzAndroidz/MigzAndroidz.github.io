@@ -4,3 +4,9 @@
             if(Email== "migzcayetano23@gmail.com " && Password== "Janelle Legaspi"){
                 window.location.assign("logins.html");
 		    alert("Login Success! ");
+		     }
+            else{
+                alert("Invalid");
+                return;
+            }
+        }
