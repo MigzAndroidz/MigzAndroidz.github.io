@@ -1,12 +1,21 @@
- function auth(){
-            var Email =document.getElementById("Email").value;
-            var Password = document.getElementById("Password").value;
-            if(Email== "migzcayetano23@gmail.com " && Password== "Janelle Legaspi"){
-                window.location.assign("logins.html");
-		    alert("Login Success! ");
-		     }
-            else{
-                alert("Invalid");
-                return;
-            }
-        }
+var attempt = 3; 
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "migzcayetano23@gmail.com" && password == "JanelleLegaspi"){
+alert ("Login successfully");
+window.location = "logins.html"; 
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
