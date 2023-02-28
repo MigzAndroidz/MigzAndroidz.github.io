@@ -4,7 +4,7 @@ var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 if ( username == "migzcayetano23@gmail.com" && password == "JanelleLegaspi"){
 alert ("Login successfully");
-window.location = "logins.html"; 
+window.location = "index.html"; 
 return false;
 }
 else{
