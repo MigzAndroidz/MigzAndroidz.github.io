@@ -1,8 +1,6 @@
-			function validate(){
-			var username = document.getElementById("username");
-			var password = document.getElementById("password");
-			if (username.value == 'migzcayetano23@gmail.com' && password.value == "JanelleLegaspi"){
-				//alert ("Login successfully");
-			window.location.href = "https://migzandroidz.github.io/logins.html";
-				}
-			}
+ function auth(){
+            var Email =document.getElementById("Email").value;
+            var Password = document.getElementById("Password").value;
+            if(Email== "migzcayetano23@gmail.com " && Password== "Janelle Legaspi"){
+                window.location.assign("logins.html");
+		    alert("Login Success! ");
