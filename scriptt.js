@@ -1,9 +1,9 @@
 function auth(){
-            var Email =document.getElementById("Email").value;
-            var Password = document.getElementById("Password").value;
-            if(Email== "migzcayetano23@gmail.com" && Password== "Janelle Legaspi"){
-                window.location.replace("index.html");
+            var email =document.getElementById("Email");
+            var password = document.getElementById("Password");
+            if( email.value == "migzcayetano23@gmail.com" && password.value == "Janelle Legaspi"){
                 alert("Login Success! ");
+                window.location.replace("index.html");
             }
             else{
                 alert("Invalid");
