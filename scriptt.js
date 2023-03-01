@@ -1,7 +1,7 @@
 function auth(){
             var Email =document.getElementById("Email").value;
             var Password = document.getElementById("Password").value;
-            if(Email== "migzcayetano23@gmail.com " && Password== "Janelle Legaspi"){
+            if(Email== "migzcayetano23@gmail.com" && Password== "Janelle Legaspi"){
                 window.location.replace("index.html");
                 alert("Login Success! ");
             }
