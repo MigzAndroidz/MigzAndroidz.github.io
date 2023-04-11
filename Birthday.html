@@ -1,14 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Bday.css">
-    <title>BirthDay CountDown! </title>
 
-</head>
-<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Birthday Countdown</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 50px;
+        font-size: 50px;
+        color: #333;
+      }
+
+      #count {
+        font-size: 50px;
+        color: #555;
+        margin-top: 20px;
+      }
+
+      /* Dark mode styles */
+      body.dark {
+        background-color: #222;
+        color: #fff;
+      }
+
+      h1.dark {
+        color: #fff;
+      }
+
+      #count.dark {
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
     <h1>Birthday Countdown</h1>
     <p id="count"></p>
     <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
@@ -35,5 +64,5 @@
         document.getElementById("count").innerHTML = `${bDay}d, ${bHour}h, ${bMin}m, ${bSec}s`;
       }, 1000)
     </script>
-</body>
+  </body>
 </html>
