@@ -52,7 +52,8 @@
       }
 
       setInterval(() => {
-        const date = new Date(new Date().getFullYear(), 4, 25);
+        let date = new Date(new Date().getFullYear(), 4, 25);
+        if (Date.now() > date.getTime()) date = new Date(new Date().getFullYear()+1,4,25);
         const age = date.getFullYear() - 2006;
         var bSec = Math.floor((date.getTime() - new Date())/1000);
         var bMin = Math.floor(bSec/60);
