@@ -1,11 +1,6 @@
-function auth(){
-            var email = document.getElementById("Email");
-            var password = document.getElementById("Password");
-            if( email.value == "migzcayetano23@gmail.com" && password.value == "Janelle Legaspi"){
-                //alert("Login Success! ");
-                window.location.assign("./index.html");
-            }
-            else{
-                alert("Invalid");
-            }
-        }
+document.querySelector('.signup-form').addEventListener('submit', function(event){
+            event.preventDefault();
+           var username = document.querySelector('input[type="text"]').value;
+            var email = document.querySelector('input[type="email"]').value;
+    var password = document.querySelector('input[type="password"]').value;
+            
