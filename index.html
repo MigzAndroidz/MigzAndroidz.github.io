@@ -1,68 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title> Miguel's Page</title>
-        <link rel="stylesheet" href="styleee1.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miguel Cayetano | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    /* Inline typewriter effect styling */
+    .typing {
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #ca3535;
+      animation: typing 3s steps(20, end), blink 0.75s step-end infinite;
+      display: inline-block;
+      font-size: 28px;
+    }
 
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
 
-    </head>
-    <body>
-        <div class="header">
-            <nav>
-                <ul><a href="#" class="logo"> Miguel Cayetano </a> </ul>
-                <div class="nav-links">
-                    
-                        <li><a href="Gallery.html">Home</a></li>
-                        <li><a href="TicTacToe.html">Game</a></li>
-                        <li><a href="https://lwrncepage.carrd.co/">Portfolio</a></li>
-                        <li><a href="Birthday.html">About</a></li>
-                        <li><a href="LogIn.html">Connect</a></li>
-                     
-                    
-                </div>
-            </nav>
-                <div class="left-sidebar"></div>
-                <div class="row">
-                    <div class="left-col">                                                
-                    <img src="pic.png" />
-                </div>
-                <div class="right-col"><br>
-                    <h1>Greetings from Miguel!<br>
-                          <h2>Jr. Developer</h2><br>
-                     </h1>
-                     <p>Mastering my skills specially in Java</p>
-                     <p>Learning different technique in programming </p> 
-                     <p> Gathering information about technology</p> 
-                    <p> Loving Her, Day by Day </p>
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
 
-                     <div class="social-media">
-                        <div class="icon">
-                            <i class="fab fa-facebook-f"></i>
-                            <a href="https://www.facebook.com/CayetanoLawrence25">Facebook</a>
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <i class="fab fa-instagram"></i>
-                            <a href="https://www.instagram.com/miguellwrncecayetano/"> Instagram</a>
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
+  <header class="header">
+    <nav>
+      <div class="logo"><a href="#">Miguel Cayetano</a></div>
+      <ul class="nav-links">
+        <li><a href="Gallery.html">Home</a></li>
+        <li><a href="TicTacToe.html">Game</a></li>
+        <li><a href="https://lwrncepage.carrd.co/">Portfolio</a></li>
+        <li><a href="Birthday.html">About</a></li>
+        <li><a href="LogIn.html">Connect</a></li>
+      </ul>
+    </nav>
 
-                        <div class="icon">
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/MigzAndroidz"> Github </a>
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
+    <main class="row">
+      <div class="left-col">
+        <img src="pic.png" alt="Miguel's photo" />
+      </div>
+      <div class="right-col">
+        <h1 class="typing" id="typed-name"></h1>
+        <h2>Jr. Developer</h2>
+        <p>Mastering my skills especially in Java.</p>
+        <p>Learning different techniques in programming.</p>
+        <p>Gathering information about technology.</p>
+        <p>Loving Her, Day by Day.</p>
 
-                     </div>
-                </div>
+        <div class="social-media">
+          <a href="https://www.facebook.com/CayetanoLawrence25" class="icon">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a href="https://www.instagram.com/miguellwrncecayetano/" class="icon">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="https://github.com/MigzAndroidz" class="icon">
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
-        </div>
-    </body>
+      </div>
+    </main>
+  </header>
+
+  <!-- Typing Effect Script -->
+  <script>
+    const text = "Greetings from Miguel!";
+    const typingEl = document.getElementById("typed-name");
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        typingEl.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+
+    type();
+  </script>
+
+</body>
 </html>
