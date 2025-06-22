@@ -2,59 +2,536 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miguel Cayetano | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styleee1.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B82F6',
+            secondary: '#1E293B',
+            accent: '#0EA5E9',
+            lightTeal: '#e0f7fa',
+            lightGreen: '#e8f5e9'
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+            'slide-up': 'slideUp 0.8s ease-out forwards',
+            'bounce-slow': 'bounce 3s infinite',
+            'bg-move': 'bgMove 20s ease infinite alternate'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 }
+            },
+            bounce: {
+              '0%, 100%': { transform: 'translateY(-5%)', animationTimingFunction: 'cubic-bezier(0.8,0,1,1)' },
+              '50%': { transform: 'translateY(0)', animationTimingFunction: 'cubic-bezier(0,0,0.2,1)' }
+            },
+            bgMove: {
+              '0%': { 'background-position': '0% 50%' },
+              '100%': { 'background-position': '100% 50%' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #e0f7fa, #e8f5e9);
+      background-size: 300% 300%;
+      animation: bgMove 20s ease infinite alternate;
+      min-height: 100vh;
+      color: #333;
+    }
+    .section {
+      opacity: 0;
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #3B82F6;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .project-card {
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .skill-badge {
+      transition: all 0.3s ease;
+    }
+    .skill-badge:hover {
+      transform: scale(1.05);
+      background-color: #3B82F6;
+      color: white;
+    }
+    .profile-img {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .profile-img:hover {
+      transform: scale(1.03);
+    }
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 8px;
+      color: #000;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+    .social-btn:hover {
+      background: rgba(208, 208, 208, 0.8);
+      transform: translateY(-2px);
+    }
+    .social-btn i {
+      transition: transform 0.3s ease;
+    }
+    .social-btn:hover i {
+      transform: scale(1.2);
+    }
+    .section-title {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background: #3B82F6;
+      bottom: 0;
+      left: 25%;
+      border-radius: 3px;
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <a href="#" class="logo">Miguel Cayetano</a>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#connect">Connect</a></li>
+<body class="bg-gradient-to-br from-lightTeal to-lightGreen">
+  
+  <header class="fixed w-full bg-white bg-opacity-80 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="#" class="text-xl font-bold text-primary">Miguel Cayetano</a>
+        
+        
+        <nav class="hidden md:block">
+          <ul class="flex space-x-8">
+            <li><a href="#home" class="nav-link text-gray-700 hover:text-primary transition">Home</a></li>
+            <li><a href="#portfolio" class="nav-link text-gray-700 hover:text-primary transition">Portfolio</a></li>
+            <li><a href="#about" class="nav-link text-gray-700 hover:text-primary transition">About</a></li>
+            <li><a href="#skills" class="nav-link text-gray-700 hover:text-primary transition">Skills</a></li>
+            <li><a href="#connect" class="nav-link text-gray-700 hover:text-primary transition">Connect</a></li>
+          </ul>
+        </nav>
+        
+       
+        <button id="menu-btn" class="md:hidden text-gray-700 hover:text-primary focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-90 backdrop-blur-sm py-4 border-t">
+      <ul class="flex flex-col space-y-3 px-4">
+        <li><a href="#home" class="block py-2 text-gray-700 hover:text-primary transition">Home</a></li>
+        <li><a href="#portfolio" class="block py-2 text-gray-700 hover:text-primary transition">Portfolio</a></li>
+        <li><a href="#about" class="block py-2 text-gray-700 hover:text-primary transition">About</a></li>
+        <li><a href="#skills" class="block py-2 text-gray-700 hover:text-primary transition">Skills</a></li>
+        <li><a href="#connect" class="block py-2 text-gray-700 hover:text-primary transition">Connect</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
-  <section class="container" id="home">
-    <div class="profile-img">
-      <img src="pic.png" alt="Miguel's Photo">
-    </div>
-    <div class="intro">
-      <h1 id="typed-text">Greetings from Miguel!</h1>
-      <h2>Jr. Developer</h2>
-      <p>Mastering my skills especially in Java.</p>
-      <p>Learning different techniques in programming.</p>
-      <p>Gathering information about technology.</p>
-      <div class="social-media">
-        <a href="https://www.facebook.com/CayetanoLawrence25"><i class="fab fa-facebook-f"></i> Facebook</a>
-        <a href="https://https://www.instagram.com/st.lwrnce/"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://github.com/MigzAndroidz"><i class="fab fa-github"></i> GitHub</a>
+  
+  <section id="home" class="pt-32 pb-20 px-4 section animate-fade-in">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-2/5 mb-10 md:mb-0 flex justify-center">
+          <div class="profile-img w-64 h-64 md:w-80 md:h-80">
+            <div class="w-full h-full bg-gradient-to-br from-cyan-100 to-emerald-100 rounded-xl flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-user text-7xl text-cyan-500 mb-3"></i>
+                <p class="text-gray-600 font-medium">Miguel Cayetano</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-3/5 text-center md:text-left md:pl-12">
+          <h1 id="typed-text" class="text-4xl md:text-5xl font-bold mb-4">Hello, I'm Miguel Cayetano</h1>
+          <h2 class="text-2xl md:text-3xl text-gray-700 mb-6">Jr. Developer & Java Enthusiast</h2>
+          <div class="bg-white bg-opacity-70 rounded-xl p-6 mb-6 backdrop-blur-sm">
+            <p class="text-gray-700 mb-3 flex items-start">
+              <i class="fas fa-check-circle text-emerald-500 mt-1 mr-2"></i>
+              <span>Mastering my skills especially in Java</span>
+            </p>
+            <p class="text-gray-700 mb-3 flex items-start">
+              <i class="fas fa-check-circle text-emerald-500 mt-1 mr-2"></i>
+              <span>Learning different techniques in programming</span>
+            </p>
+            <p class="text-gray-700 flex items-start">
+              <i class="fas fa-check-circle text-emerald-500 mt-1 mr-2"></i>
+              <span>Gathering information about technology</span>
+            </p>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+            <a href="#portfolio" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition transform hover:-translate-y-1 shadow-lg flex items-center justify-center">
+              <i class="fas fa-code mr-2"></i> View My Work
+            </a>
+            <a href="#connect" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition shadow-lg flex items-center justify-center">
+              <i class="fas fa-paper-plane mr-2"></i> Contact Me
+            </a>
+          </div>
+          
+          <div class="flex flex-wrap justify-center md:justify-start gap-4">
+            <a href="https://www.facebook.com/CayetanoLawrence25" class="social-btn">
+              <i class="fab fa-facebook-f text-blue-600"></i> Facebook
+            </a>
+            <a href="https://www.instagram.com/st.lwrnce/" class="social-btn">
+              <i class="fab fa-instagram text-pink-600"></i> Instagram
+            </a>
+            <a href="https://github.com/MigzAndroidz" class="social-btn">
+              <i class="fab fa-github text-gray-800"></i> GitHub
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+ 
+  <section id="portfolio" class="py-20 bg-white bg-opacity-70 backdrop-blur-sm px-4 section">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">My Projects</h2>
+        <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Here are some of my recent projects showcasing my Java expertise and programming skills.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+       
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg animate-slide-up border border-gray-100">
+          <div class="bg-gradient-to-r from-cyan-100 to-blue-100 w-full h-48 flex items-center justify-center">
+            <i class="fas fa-boxes text-6xl text-blue-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Java Inventory System</h3>
+            <p class="text-gray-600 mb-4">
+              A desktop application for inventory management with Java Swing UI and MySQL database integration.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                <i class="fab fa-github mr-2"></i> GitHub
+              </a>
+              <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                <i class="fas fa-external-link-alt mr-2"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg animate-slide-up border border-gray-100" style="animation-delay: 0.2s">
+          <div class="bg-gradient-to-r from-amber-100 to-yellow-100 w-full h-48 flex items-center justify-center">
+            <i class="fas fa-sort-amount-down-alt text-6xl text-amber-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Algorithm Visualizer</h3>
+            <p class="text-gray-600 mb-4">
+              Interactive Java application that visualizes sorting algorithms with real-time performance metrics.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                <i class="fab fa-github mr-2"></i> GitHub
+              </a>
+              <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                <i class="fas fa-external-link-alt mr-2"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+       
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg animate-slide-up border border-gray-100" style="animation-delay: 0.4s">
+          <div class="bg-gradient-to-r from-violet-100 to-purple-100 w-full h-48 flex items-center justify-center">
+            <i class="fas fa-shopping-cart text-6xl text-purple-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">E-Commerce Backend</h3>
+            <p class="text-gray-600 mb-4">
+              RESTful API for an e-commerce platform built with Java Spring Boot and MongoDB.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                <i class="fab fa-github mr-2"></i> GitHub
+              </a>
+              <a href="#" class="text-primary hover:text-blue-700 flex items-center">
+                <i class="fas fa-external-link-alt mr-2"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ ass="py-20 px-4 section">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center">
+        <div class="lg:w-2/5 mb-10 lg:mb-0">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-cyan-200 to-blue-200 rounded-2xl transform rotate-6 animate-bounce-slow"></div>
+            <div class="relative bg-white rounded-2xl w-full h-64 md:h-80 transform -rotate-3 p-8">
+              <div class="flex flex-col h-full justify-center">
+                <div class="flex items-center mb-6">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-graduation-cap text-blue-500 text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold">Education</h3>
+                    <p class="text-gray-600">BS in Computer Science</p>
+                  </div>
+                </div>
+                <div class="flex items-center mb-6">
+                  <div class="w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-briefcase text-cyan-500 text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold">Experience</h3>
+                    <p class="text-gray-600">2+ years developing</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-laptop-code text-emerald-500 text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold">Focus</h3>
+                    <p class="text-gray-600">Java & Backend Development</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-3/5 lg:pl-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 section-title">About Me</h2>
+          <div class="bg-white bg-opacity-80 backdrop-blur-sm rounded-xl p-6 mb-6">
+            <p class="text-gray-700 mb-4">
+              I'm Miguel Cayetano, a passionate Junior Developer specializing in Java with a strong foundation in object-oriented programming. 
+              I'm dedicated to writing clean, efficient code and continuously expanding my technical knowledge.
+            </p>
+            <p class="text-gray-700 mb-4">
+              My journey in programming started with a fascination for how technology solves real-world problems. 
+              I'm particularly drawn to Java's robustness and versatility, and I'm constantly exploring new libraries 
+              and frameworks to enhance my development capabilities.
+            </p>
+            <p class="text-gray-700">
+              When I'm not coding, you can find me contributing to open-source projects, participating in coding challenges, 
+              or exploring new technologies. I believe in continuous learning and collaboration as pathways to growth.
+            </p>
+          </div>
+          <a href="#" class="inline-flex items-center text-primary font-medium bg-white bg-opacity-70 backdrop-blur-sm px-6 py-3 rounded-lg hover:bg-opacity-100 transition">
+            Download Resume <i class="fas fa-download ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="skills" class="py-20 bg-white bg-opacity-70 backdrop-blur-sm px-4 section">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">My Skills</h2>
+        <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Technologies and tools I specialize in and continue to develop expertise with.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fab fa-java text-5xl text-orange-500 mb-3"></i>
+          <span class="font-medium">Java</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fab fa-python text-5xl text-blue-500 mb-3"></i>
+          <span class="font-medium">Python</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fab fa-js text-5xl text-yellow-500 mb-3"></i>
+          <span class="font-medium">JavaScript</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fas fa-database text-5xl text-blue-400 mb-3"></i>
+          <span class="font-medium">SQL</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fab fa-git-alt text-5xl text-orange-600 mb-3"></i>
+          <span class="font-medium">Git</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fas fa-cloud text-5xl text-blue-300 mb-3"></i>
+          <span class="font-medium">AWS</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fab fa-linux text-5xl text-gray-800 mb-3"></i>
+          <span class="font-medium">Linux</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fas fa-server text-5xl text-green-500 mb-3"></i>
+          <span class="font-medium">Spring Boot</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fab fa-docker text-5xl text-blue-600 mb-3"></i>
+          <span class="font-medium">Docker</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fas fa-code text-5xl text-purple-500 mb-3"></i>
+          <span class="font-medium">OOP</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fas fa-mobile-alt text-5xl text-indigo-500 mb-3"></i>
+          <span class="font-medium">Android</span>
+        </div>
+        <div class="skill-badge flex flex-col items-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+          <i class="fas fa-terminal text-5xl text-gray-600 mb-3"></i>
+          <span class="font-medium">CLI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer id="connect" class="py-12 bg-secondary text-white px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-8 md:mb-0 text-center md:text-left">
+          <h3 class="text-2xl font-bold mb-4">Miguel Cayetano</h3>
+          <p class="text-gray-300 max-w-md">
+            Junior Developer specializing in Java with a passion for creating efficient and scalable solutions.
+          </p>
+        </div>
+        <div class="text-center md:text-right">
+          <h4 class="text-lg font-semibold mb-4">Connect with me</h4>
+          <div class="flex space-x-4 justify-center md:justify-end">
+            <a href="mailto:your.email@example.com" class="text-gray-300 hover:text-white transition transform hover:-translate-y-1" title="Email">
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+            <a href="https://github.com/MigzAndroidz" class="text-gray-300 hover:text-white transition transform hover:-translate-y-1" title="GitHub">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="https://www.facebook.com/CayetanoLawrence25" class="text-gray-300 hover:text-white transition transform hover:-translate-y-1" title="Facebook">
+              <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/st.lwrnce/" class="text-gray-300 hover:text-white transition transform hover:-translate-y-1" title="Instagram">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition transform hover:-translate-y-1" title="LinkedIn">
+              <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+          </div>
+          <p class="mt-6 text-gray-400">© 2023 Miguel Cayetano. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    const text = "Greetings from Miguel!";
-    const typedText = document.getElementById("typed-text");
-    let index = 0;
-    typedText.textContent = "";
-
-    function typeLetter() {
-      if (index < text.length) {
-        typedText.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeLetter, 100);
+   
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+    
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const text = "Hello, I'm Miguel Cayetano";
+      const typedText = document.getElementById("typed-text");
+      let index = 0;
+      typedText.textContent = "";
+      
+      function typeLetter() {
+        if (index < text.length) {
+          typedText.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeLetter, 100);
+        }
       }
-    }
-
-    typeLetter();
+      typeLetter();
+      
+      
+      const observerOptions = {
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+          }
+        });
+      }, observerOptions);
+      
+      
+      document.querySelectorAll('.section').forEach(section => {
+        observer.observe(section);
+      });
+      
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
