@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Portfolio</title>
     
-    <link rel="stylesheet" href="style.css">
-    <script src="Script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/Script.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -21,8 +22,6 @@
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="contact.html" class="nav-link">Work With Me</a>
                     <a href="aboutMe.html" class="nav-link">About Me</a>
-                    
-                    
                     <button id="theme-toggle" class="theme-btn">
                         <i class="fas fa-moon moon-icon"></i>
                         <i class="fas fa-sun sun-icon"></i>
@@ -34,80 +33,149 @@
                 </button>
             </div>
         </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="Index.html" class="mobile-link">Home</a>
+                <a href="Projects.html" class="mobile-link">Projects</a>
+                <a href="Contact.html" class="mobile-link">Work With Me</a>
+                <a href="AboutMe.html" class="mobile-link">About Me</a>
+                <a href="Certificates.html" class="mobile-link">Certs</a>
+                <button id="theme-toggle-mobile" class="mobile-theme-btn">Switch Theme</button>
+            </div>
+        </div>
     </nav>
+    
     <section id="projects" class="projects-section">
-    <div class="projects-container">
-        <div class="projects-header">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Selected works showcasing my development journey.</p>
-        </div>
+        <div class="projects-container">
+            <div class="projects-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Selected works showcasing my development journey.</p>
+            </div>
 
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-window-restore placeholder-icon"></i>
-                    <div class="project-overlay">
-                        <span>View Screenshot</span>
-                    </div>
-                </div>
+            <div class="projects-grid">
                 
-                <div class="project-content">
-                    <div class="project-meta">
-                        <div>
-                            <h3 class="project-title">E-Portfolio GUI</h3>
-                            <p class="project-category category-purple">Desktop Application</p>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Gui.jpg" alt="Desktop Application" class="project-img">
+                        <div class="project-overlay">
                         </div>
-                        <i class="fas fa-desktop project-icon"></i>
                     </div>
                     
-                    <p class="project-description">
-                        A comprehensive GUI application built with <strong>C#</strong>. Designed to showcase digital portfolios with a custom, user-friendly interface and smooth navigation elements.
-                    </p>
-                    
-                    <div class="project-tags">
-                        <span class="tag tag-purple">C#</span>
-                        <span class="tag tag-purple">.NET</span>
-                        <span class="tag tag-purple">WinForms</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-image placeholder-icon"></i>
-                    <div class="project-overlay">
-                        <span>View Screenshot</span>
-                    </div>
-                </div>
-
-                <div class="project-content">
-                    <div class="project-meta">
-                        <div>
-                            <h3 class="project-title">Panoramic Website</h3>
-                            <p class="project-category category-blue">Web Development</p>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <div>
+                                <h3 class="project-title">E-Portfolio GUI</h3>
+                                <p class="project-category category-purple">Desktop Application</p>
+                            </div>
+                            <i class="fas fa-desktop project-icon"></i>
                         </div>
-                        <i class="fas fa-globe project-icon"></i>
-                    </div>
-                    
-                    <p class="project-description">
-                        An immersive web experience focusing on wide-angle layout presentation. Designed to demonstrate responsive CSS layouting and modern web aesthetics.
-                    </p>
-                    
-                    <div class="project-tags">
-                        <span class="tag tag-blue">HTML5</span>
-                        <span class="tag tag-blue">CSS3</span>
-                        <span class="tag tag-blue">Design</span>
+                        
+                        <p class="project-description">
+                            A comprehensive GUI application built with <strong>C#</strong>. Designed to showcase digital portfolios with a custom, user-friendly interface and smooth navigation elements.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="tag tag-purple">C#</span>
+                            <span class="tag tag-purple">.NET</span>
+                            <span class="tag tag-purple">WinForms</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/PanoramicImage.jpg" alt="Panoramic Website" class="project-img">
+                        <div class="project-overlay">
+                            </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <div>
+                                <h3 class="project-title">Panoramic Website</h3>
+                                <p class="project-category category-blue">Web Development</p>
+                            </div>
+                            <i class="fas fa-globe project-icon"></i>
+                        </div>
+                        
+                        <p class="project-description">
+                            An immersive web experience focusing on wide-angle layout presentation. Designed to demonstrate the beauty of Northern Mindanao through 
+                            responsive CSS layouting and modern web aesthetics.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="tag tag-blue">HTML5</span>
+                            <span class="tag tag-blue">CSS3</span>
+                            <span class="tag tag-blue">Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/LeyBakes.jpg" alt="Ley Bakes System" class="project-img">
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <div>
+                                <h3 class="project-title">Ley Bakes System</h3>
+                                <p class="project-category category-green">Full-Stack Web</p>
+                            </div>
+                            <i class="fas fa-shopping-cart project-icon"></i>
+                        </div>
+                        
+                        <p class="project-description">
+                            A dynamic e-commerce bakery platform featuring a real-time product menu, shopping cart functionality, and a dedicated admin dashboard for inventory and order management.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="tag tag-green">JavaScript</span>
+                            <span class="tag tag-green">Node.js</span>
+                            <span class="tag tag-green">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Origami.jpeg" alt="Origami Showcase" class="project-img">
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <div>
+                                <h3 class="project-title">Origami Showcase</h3>
+                                <p class="project-category category-blue">Web Development</p>
+                            </div>
+                            <i class="fas fa-paper-plane project-icon"></i>
+                        </div>
+                        
+                        <p class="project-description">
+                            A creative web project dedicated to the art of paper folding. It features interactive galleries and responsive designs that bring intricate origami concepts to life on the web.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="tag tag-blue">HTML5</span>
+                            <span class="tag tag-blue">CSS3</span>
+                            <span class="tag tag-blue">UI/Design</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
-          <footer id="connect" class="site-footer">
-    <div class="footer-container">
-        <p class="copyright">© 2026 Miguel Cayetano. All rights reserved.</p>
-    </div>
+    </section>
+    
+    <footer id="connect" class="site-footer">
+        <div class="footer-container">
+            <p class="copyright">© 2026 Miguel Cayetano. All rights reserved.</p>
+        </div>
+    </footer> 
 </body>
 </html>
