@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Cayetano | Portfolio</title>
     
-    <link rel="stylesheet" href="style.css">
-    <script src="Script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/Script.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -17,13 +18,11 @@
                 <a href="#" class="logo">MC<span class="highlight">.</span></a>
                 
                 <div class="desktop-menu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="projects.html" class="nav-link">Projects</a>
-                    <a href="contact.html" class="nav-link">Work With Me</a>
-                    <a href="aboutMe.html" class="nav-link">About Me</a>
-                   
-
-                    <button id="theme-toggle" class="theme-btn">
+                    <a href="Index.html" class="nav-link">Home</a>
+                    <a href="Projects.html" class="nav-link">Projects</a>
+                    <a href="Contact.html" class="nav-link">Work With Me</a>
+                    <a href="AboutMe.html" class="nav-link">About Me</a>
+                     <button id="theme-toggle" class="theme-btn">
                         <i class="fas fa-moon moon-icon"></i>
                         <i class="fas fa-sun sun-icon"></i>
                     </button>
@@ -35,13 +34,12 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="mobile-menu hidden">
+        <div id="mobile-menu" class="mobile-menu">
             <div class="mobile-menu-links">
                 <a href="Index.html" class="mobile-link">Home</a>
                 <a href="Projects.html" class="mobile-link">Projects</a>
                 <a href="Contact.html" class="mobile-link">Work With Me</a>
                 <a href="AboutMe.html" class="mobile-link">About Me</a>
-                <a href="Certificates.html" class="mobile-link">Certs</a>
                 <button id="theme-toggle-mobile" class="mobile-theme-btn">Switch Theme</button>
             </div>
         </div>
@@ -54,7 +52,7 @@
         <div class="hero-content">
             <div class="profile-wrapper">
                 <div class="profile-container">
-                    <img src="pic.png" 
+                    <img src="images\Profile.jpg" 
                          alt="Miguel Cayetano" 
                          class="profile-pic"
                          onerror="this.src='https://ui-avatars.com/api/?name=Miguel+Cayetano&background=3B82F6&color=fff&size=500';">
@@ -74,6 +72,11 @@
 
             <div class="button-group">
                 <a href="Projects.html" class="btn btn-primary">View My Work</a>
+                
+                <a href="assets/CayetanoResume.pdf" download="CayetanoResume.pdf" class="btn btn-secondary text-primary border-primary">
+                    <i class="fas fa-file-download mr-2"></i> Download Resume
+                </a>
+                
                 <a href="Contact.html" class="btn btn-secondary">Contact Me</a>
             </div>
         </div>
