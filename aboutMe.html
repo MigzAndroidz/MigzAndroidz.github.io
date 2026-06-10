@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Portfolio</title>
     
-   <link rel="stylesheet" href="style.css">
-     <script src="Script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/Script.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -17,12 +18,10 @@
                 <a href="Index.html" class="logo">MC<span class="highlight">.</span></a>
                 
                 <div class="desktop-menu">
-                   <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html" class="nav-link">Home</a>
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="contact.html" class="nav-link">Work With Me</a>
                     <a href="aboutMe.html" class="nav-link">About Me</a>
-                  
-                    
                     <button id="theme-toggle" class="theme-btn">
                         <i class="fas fa-moon moon-icon"></i>
                         <i class="fas fa-sun sun-icon"></i>
@@ -34,22 +33,35 @@
                 </button>
             </div>
         </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="Index.html" class="mobile-link">Home</a>
+                <a href="Projects.html" class="mobile-link">Projects</a>
+                <a href="Contact.html" class="mobile-link">Work With Me</a>
+                <a href="AboutMe.html" class="mobile-link">About Me</a>
+                <a href="Certificates.html" class="mobile-link">Certs</a>
+                <button id="theme-toggle-mobile" class="mobile-theme-btn">Switch Theme</button>
+            </div>
+        </div>
     </nav>
 
     <section id="about-me" class="about-section">
         <div class="about-container">
             <h2 class="section-title">About Me</h2>
             
-            <div class="demoreel-wrapper">
-                
-                <div class="video-container">
-                    <video controls preload="metadata">
-                        <source src="demoreel.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    
+            <div class="video-showcase-section" style="margin-bottom: 60px;">
+                <h3 class="subsection-title" style="text-align: center; margin-bottom: 20px;">Demo Reel</h3>
+                <div class="demoreel-wrapper">
+                    <div class="video-container">
+                        <video controls preload="metadata" style="width: 100%; border-radius: 20px;">
+                            <source src="assets/DemoReel.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
+                </div>
             </div>
+
             <div class="education-wrapper">
                 <h3 class="subsection-title">Education & Coursework</h3>
                 <div class="education-card">
@@ -78,45 +90,47 @@
                 </div>
             </div>
         </div>
+    </section> 
 
-            <section id="skills" class="skills-section">
-    <div class="skills-container">
-        <h2 class="section-title">Technical Arsenal</h2>
-        
-        <div class="skills-grid">
-            <div class="skill-card skill-java">
-                <i class="fab fa-java skill-icon"></i>
-                <p class="skill-name">Java</p>
-            </div>
+    <section id="skills" class="skills-section">
+        <div class="skills-container">
+            <h2 class="section-title">Technical Arsenal</h2>
             
-            <div class="skill-card skill-csharp">
-                <div class="skill-icon-text">
-                    <span>C#</span>
+            <div class="skills-grid">
+                <div class="skill-card skill-java">
+                    <i class="fab fa-java skill-icon"></i>
+                    <p class="skill-name">Java</p>
                 </div>
-                <p class="skill-name">.NET Framework</p>
-            </div>
-            
-            <div class="skill-card skill-python">
-                <i class="fab fa-python skill-icon"></i>
-                <p class="skill-name">Python</p>
-            </div>
-            
-            <div class="skill-card skill-sql">
-                <i class="fas fa-database skill-icon"></i>
-                <p class="skill-name">SQL</p>
-            </div>
-            
-            <div class="skill-card skill-android">
-                <i class="fab fa-android skill-icon"></i>
-                <p class="skill-name">Android Studio</p>
+                
+                <div class="skill-card skill-csharp">
+                    <div class="skill-icon-text">
+                        <span>C#</span>
+                    </div>
+                    <p class="skill-name">.NET Framework</p>
+                </div>
+                
+                <div class="skill-card skill-python">
+                    <i class="fab fa-python skill-icon"></i>
+                    <p class="skill-name">Python</p>
+                </div>
+                
+                <div class="skill-card skill-sql">
+                    <i class="fas fa-database skill-icon"></i>
+                    <p class="skill-name">SQL</p>
+                </div>
+                
+                <div class="skill-card skill-android">
+                    <i class="fab fa-android skill-icon"></i>
+                    <p class="skill-name">Android Studio</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
     </section>
-           <footer id="connect" class="site-footer">
-    <div class="footer-container">
-        <p class="copyright">© 2026 Miguel Cayetano. All rights reserved.</p>
-    </div>
+    
+    <footer id="connect" class="site-footer">
+        <div class="footer-container">
+            <p class="copyright">© 2026 Miguel Cayetano. All rights reserved.</p>
+        </div>
+    </footer> 
 </body>
 </html>
