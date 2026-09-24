@@ -420,6 +420,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
     margin-bottom: 4rem;
 }
 
@@ -863,6 +865,13 @@ body {
     .stat-card {
         align-items: center;
         text-align: center;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 2.5rem;
     }
 
     .project-card {
