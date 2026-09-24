@@ -466,6 +466,8 @@ body {
     display: flex;
     flex-direction: column;
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .card-badge {
@@ -1117,6 +1119,8 @@ body {
     align-items: flex-start;
     gap: 12px;
     transition: border-color 0.2s ease;
+    width: 100%; 
+    overflow: hidden; 
 }
 
 .mini-hack-card:hover {
@@ -1127,6 +1131,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    min-width: 0; 
+    flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .mini-hack-title {
@@ -1300,7 +1309,7 @@ body {
 .mobile-hamburger-btn {
     display: none;
 }
-/* Ipakita ang hamburger menu kapag nawala ang side-nav sa 1200px */
+
 @media (max-width: 1200px) {
     .mobile-hamburger-btn {
         display: flex;
