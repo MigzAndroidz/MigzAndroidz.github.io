@@ -508,6 +508,9 @@ body {
     color: var(--modal-text);
     margin-bottom: 0;
     transition: color 0.25s ease;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .card-desc {
@@ -515,6 +518,22 @@ body {
     color: var(--modal-text-muted);
     line-height: 1.5;
     transition: color 0.25s ease;
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 4px;
+}
+
+.card-desc::-webkit-scrollbar {
+    width: 3px;
+}
+
+.card-desc::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.card-desc::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+    border-radius: 10px;
 }
 
 .card-active {
@@ -847,8 +866,17 @@ body {
     }
 
     .project-card {
-        width: 280px;
-        height: 340px;
+        width: 290px;
+        height: 390px;
+        padding: 24px 20px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-desc {
+        font-size: 0.85rem;
     }
 
     .card-prev {
