@@ -1,9 +1,8 @@
 :root {
-    /* Bryl-minimal Color Tokens */
     --bg-color: #ffffff;
-    --text-main: #0a0a0a; /* true black ink */
-    --text-muted: #737373; /* gray 500 */
-    --border-light: #e9e9e9; /* gray 200 hairline */
+    --text-main: #0a0a0a; 
+    --text-muted: #737373; 
+    --border-light: #e9e9e9; 
     --dot-color: rgba(10, 10, 10, 0.9);
     
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -11,7 +10,7 @@
     --font-pixel: 'VT323', var(--font-mono);
     
     --modal-bg: #ffffff;
-    --modal-card-bg: #fafafa; /* gray 50 */
+    --modal-card-bg: #fafafa; 
     --modal-text: #0a0a0a;
     --modal-text-muted: #737373;
     --modal-border: #e9e9e9;
@@ -22,14 +21,14 @@
 }
 
 :root[data-theme="dark"] {
-    --bg-color: #0c0c0f; /* near-black with blue cast */
-    --text-main: #f4f4f5; /* off-white */
-    --text-muted: #a0a0a8; /* gray 500 dark */
-    --border-light: #2a2a30; /* gray 200 dark */
+    --bg-color: #0c0c0f; 
+    --text-main: #f4f4f5; 
+    --text-muted: #a0a0a8; 
+    --border-light: #2a2a30; 
     --dot-color: rgba(244, 244, 245, 0.42);
     
     --modal-bg: #0c0c0f;
-    --modal-card-bg: #18181b; /* gray 50 dark */
+    --modal-card-bg: #18181b; 
     --modal-text: #f4f4f5;
     --modal-text-muted: #a0a0a8;
     --modal-border: #2a2a30;
@@ -310,7 +309,7 @@ body {
     margin-bottom: 1.5rem;
     margin-top: 1rem;
     line-height: 1.1;
-    text-transform: lowercase;
+    text-transform: capitalize;
 }
 
 .bio-description {
