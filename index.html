@@ -23,17 +23,15 @@
         </button>
     </div>
 
-    <!-- LEFT SIDEBAR -->
     <nav class="side-nav" aria-label="Secondary Navigation">
         <div class="nav-scroll-container">
-            <!-- NEW: Specialties natively inside the Sidebar -->
             <div style="margin-bottom: 2rem;">
                 <span class="micro-label" style="margin-bottom: 12px; display: block;">Specialties</span>
                 <div style="display: flex; flex-wrap: wrap;">
                     <span class="side-tag">Full-Stack</span>
                     <span class="side-tag">AI Engineering</span>
                     <span class="side-tag">Systems Int.</span>
-                    <span class="side-tag">Project Mgmt</span>
+                    <span class="side-tag">Project Management</span>
                     <span class="side-tag">API Integration</span>
                     <span class="side-tag">Database Design</span>
                     <span class="side-tag">UI/UX Design</span>
@@ -117,12 +115,16 @@
                 <span class="stat-label">CONNECTIONS</span>
             </div>
             <div class="stat-card">
-                <span class="stat-value">250+<span class="stat-arrow">&nearr;</span></span>
+                <span class="stat-value">1000+<span class="stat-arrow">&nearr;</span></span>
                 <span class="stat-label">Community</span>
             </div>
             <div class="stat-card" id="hackathonTrigger" style="cursor: pointer;">
-                <span class="stat-value">5x <span class="stat-arrow">&nearr;</span></span>
+                <span class="stat-value">7x <span class="stat-arrow">&nearr;</span></span>
                 <span class="stat-label">Hackathons</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">2x<span class="stat-arrow">&nearr;</span></span>
+                <span class="stat-label">Shipped</span>
             </div>
             <a href="https://www.facebook.com/BugsPHph" target="_blank" class="stat-card no-border" style="text-decoration: none; display: flex; flex-direction: column;">
                 <span class="stat-value">Founder<span class="stat-arrow">&nearr;</span></span>
@@ -339,7 +341,7 @@
             <div class="hack-modal-top-bar">
                 <span class="hack-meta-text">HACKATHONS</span>
                 <div class="hack-meta-right">
-                    <span class="hack-meta-text">5 ENTERED</span>
+                    <span class="hack-meta-text">7 ENTERED</span>
                     <button id="closeHackathonModalBtn" class="close-btn" aria-label="Close modal" style="margin-left: 12px;">&times;</button>
                 </div>
             </div>
@@ -351,12 +353,26 @@
                     <span class="feat-award">Participant</span> 
                     <span class="feat-badge">FEATURED</span>
                 </div>
-                <h3 class="feat-title">Egov Hackathon 2026</h3>
+                <h3 class="feat-title">GCash Innovation Challenge 2026</h3>
             </div>
 
             <div class="hack-sub-header">OTHER ACHIEVEMENTS</div>
             
             <div class="hack-grid">
+                <div class="mini-hack-card">
+                    <div class="mini-hack-content">
+                        <h4 class="mini-hack-title">UNESCO Youth Hackathon 2026</h4>
+                        <span class="mini-hack-org">Participant</span>
+                    </div>
+                </div>
+
+                <div class="mini-hack-card">
+                    <div class="mini-hack-content">
+                        <h4 class="mini-hack-title">Egov Hackathon 2026</h4>
+                        <span class="mini-hack-org">Participant</span>
+                    </div>
+                </div>
+
                 <div class="mini-hack-card">
                     <div class="mini-hack-content">
                         <h4 class="mini-hack-title">Condo Unit Security System</h4>
@@ -389,7 +405,29 @@
         </div>
     </div>
 
-    <!-- Specialties Modal Removed, content moved to Nav Sidebar and Mobile Nav -->
+    <div id="specialtiesModal" class="modal-overlay modal-hidden">
+        <div class="generic-modal">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title">Specialties</h3>
+                    <p class="modal-subtitle">Core technical focus areas.</p>
+                </div>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="tech-pills">
+                <span class="tech-pill">Full-Stack Development</span>
+                <span class="tech-pill">AI Engineering</span>
+                <span class="tech-pill">Systems Integration</span>
+                <span class="tech-pill">Project Managing</span>
+                <span class="tech-pill">API Integration</span>
+                <span class="tech-pill">Database Design</span>
+                <span class="tech-pill">UI/UX Design</span>
+                <span class="tech-pill">Mobile Development</span>
+                <span class="tech-pill">Web Development</span>
+                <span class="tech-pill">Technical Mentorship</span>
+            </div>
+        </div>
+    </div>
 
     <div id="resourcesModal" class="modal-overlay modal-hidden">
         <div class="generic-modal" style="max-width: 650px; max-height: 80vh; overflow-y: auto;">
@@ -893,65 +931,6 @@
                     <span class="cert-issuer">Flyrank</span>
                     <a href="#" target="_blank" class="cert-verify">⟨ IN PROGRESS ⟩</a>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <button type="button" class="mobile-hamburger-btn" data-modal-target="mobileMenuModal" aria-label="Open Navigation Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-    </button>
-
-    <div id="mobileMenuModal" class="modal-overlay modal-hidden">
-        <div class="generic-modal" style="max-width: 480px;">
-            <div class="modal-header">
-                <div>
-                    <h3 class="modal-title">Navigation</h3>
-                    <p class="modal-subtitle">Explore portfolio details</p>
-                </div>
-                <button class="close-btn">&times;</button>
-            </div>
-            <div style="margin-bottom: 2rem;">
-                <span class="micro-label" style="margin-bottom: 12px; display: block;">Specialties</span>
-                <div style="display: flex; flex-wrap: wrap;">
-                    <span class="side-tag">Full-Stack</span>
-                    <span class="side-tag">AI Engineering</span>
-                    <span class="side-tag">Systems Int.</span>
-                    <span class="side-tag">Project Mgmt</span>
-                    <span class="side-tag">API Integration</span>
-                    <span class="side-tag">Database Design</span>
-                    <span class="side-tag">UI/UX Design</span>
-                    <span class="side-tag">Mobile Dev</span>
-                </div>
-            </div>
-
-            <div class="mobile-nav-grid">
-                <a href="#" class="mobile-nav-card" data-modal-target="resourcesModal">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                    <div>
-                        <h4 class="mobile-nav-card-title">Resources</h4>
-                        <p class="mobile-nav-card-desc">Learning platforms & developer docs</p>
-                    </div>
-                </a>
-
-                <a href="#" class="mobile-nav-card" data-modal-target="consultingModal">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                    <div>
-                        <h4 class="mobile-nav-card-title">Consulting</h4>
-                        <p class="mobile-nav-card-desc">Services, pricing tiers & direct contact</p>
-                    </div>
-                </a>
-
-                <a href="#" class="mobile-nav-card" data-modal-target="projectsModal">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                    <div>
-                        <h4 class="mobile-nav-card-title">Projects</h4>
-                        <p class="mobile-nav-card-desc">Full archive of selected web & mobile work</p>
-                    </div>
-                </a>
             </div>
         </div>
     </div>
