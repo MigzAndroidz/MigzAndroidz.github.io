@@ -80,18 +80,16 @@ body {
 }
 
 .portfolio-wrapper {
-    max-width: 100%;
-    margin: 0;
+    max-width: 896px;
+    margin: 0 auto;
     padding: 6rem 2rem;
     position: relative;
 }
 
 @media (min-width: 1024px) {
     .portfolio-wrapper {
-        margin-left: 16rem;
-        padding-left: 2rem;
-        padding-right: 4rem;
-        max-width: calc(100% - 16rem);
+        margin-left: 17rem;
+        padding-left: 0;
     }
 }
 
@@ -293,8 +291,8 @@ body {
 
 .hero-section {
     display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 5rem;
+    grid-template-columns: 1fr 280px;
+    gap: 4rem;
     align-items: start;
     margin-bottom: 3rem;
 }
@@ -342,7 +340,7 @@ body {
     margin-bottom: 3rem;
     font-size: 15px;
     color: var(--text-muted);
-    max-width: 750px;
+    max-width: 500px;
 }
 
 .social-links {
@@ -630,7 +628,6 @@ body {
     object-fit: contain;
 }
 
-/* CSS UPDATE: Sisiguraduhing ang itim na aws.svg ay magiging puti sa dark mode */
 :root[data-theme="dark"] .theme-icon {
     filter: invert(1) brightness(2);
 }
