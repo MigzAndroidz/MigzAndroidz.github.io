@@ -80,16 +80,18 @@ body {
 }
 
 .portfolio-wrapper {
-    max-width: 896px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     padding: 6rem 2rem;
     position: relative;
 }
 
 @media (min-width: 1024px) {
     .portfolio-wrapper {
-        margin-left: 17rem;
-        padding-left: 0;
+        margin-left: 16rem;
+        padding-left: 2rem;
+        padding-right: 4rem;
+        max-width: calc(100% - 16rem);
     }
 }
 
@@ -291,8 +293,8 @@ body {
 
 .hero-section {
     display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: 4rem;
+    grid-template-columns: 1fr 380px;
+    gap: 5rem;
     align-items: start;
     margin-bottom: 3rem;
 }
@@ -340,7 +342,7 @@ body {
     margin-bottom: 3rem;
     font-size: 15px;
     color: var(--text-muted);
-    max-width: 500px;
+    max-width: 750px;
 }
 
 .social-links {
@@ -457,7 +459,7 @@ body {
     color: var(--text-muted);
     text-decoration: none;
     letter-spacing: 0.5px;
-    transition: color 0.25s ease, transform 0.25s ease;
+    transition: color 0.2s ease, transform 0.25s ease;
 }
 
 .view-all-link:hover {
