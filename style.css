@@ -628,6 +628,12 @@ body {
     object-fit: contain;
 }
 
+/* FIX: black/dark logos (Sololearn, freeCodeCamp) become white in dark mode.
+   The AWS logo is now a self-hosted orange SVG, so it no longer uses this class. */
+:root[data-theme="dark"] .theme-icon {
+    filter: invert(1);
+}
+
 .cert-title {
     font-family: var(--font-sans);
     font-size: 15px;
