@@ -24,59 +24,86 @@
     </div>
 
     <nav class="side-nav" aria-label="Secondary Navigation">
+        <div class="side-brand">Miguel.dev</div>
+        
+        <button class="side-primary-btn" id="navContactTrigger" data-modal-target="contactModalOverlay">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Let's Talk
+        </button>
+
         <div class="nav-scroll-container">
-            <div style="margin-bottom: 2rem;">
-                <span class="micro-label" style="margin-bottom: 12px; display: block;">Specialties</span>
-                <div style="display: flex; flex-wrap: wrap;">
-                    <span class="side-tag">Full-Stack</span>
-                    <span class="side-tag">AI Engineering</span>
-                    <span class="side-tag">Systems Int.</span>
-                    <span class="side-tag">Project Management</span>
-                    <span class="side-tag">API Integration</span>
-                    <span class="side-tag">Database Design</span>
-                    <span class="side-tag">UI/UX Design</span>
-                    <span class="side-tag">Mobile Dev</span>
-                </div>
+            <div class="nav-category">Portfolio</div>
+            <div class="nav-group">
+                <a href="#" class="side-link" data-modal-target="projectsModal">
+                    <div class="side-link-left">
+                        <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        <span>Projects</span>
+                    </div>
+                    <span class="side-link-count">06</span>
+                </a>
+                
+                <a href="#" class="side-link" data-modal-target="hackathonModalOverlay">
+                    <div class="side-link-left">
+                        <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        <span>Hackathons</span>
+                    </div>
+                    <span class="side-link-count">11</span>
+                </a>
+
+                <a href="#" class="side-link" data-modal-target="certificationsModal">
+                    <div class="side-link-left">
+                        <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Credentials</span>
+                    </div>
+                    <span class="side-link-count">15</span>
+                </a>
             </div>
 
+            <div class="nav-category">Explore</div>
             <div class="nav-group">
                 <a href="#" class="side-link" data-modal-target="resourcesModal">
-                    <span class="hover-arrow">&rarr;</span>
-                    <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                    <span class="link-text">Resources</span>
+                    <div class="side-link-left">
+                        <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        <span>Resources</span>
+                    </div>
+                    <span class="side-link-count">10</span>
                 </a>
 
                 <a href="#" class="side-link" data-modal-target="consultingModal">
-                    <span class="hover-arrow">&rarr;</span>
-                    <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                    <span class="link-text">Consulting</span>
-                </a>
-
-                <a href="#" class="side-link" data-modal-target="projectsModal">
-                    <span class="hover-arrow">&rarr;</span>
-                    <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                    <span class="link-text">Projects</span>
+                    <div class="side-link-left">
+                        <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        <span>Consulting</span>
+                    </div>
                 </a>
             </div>
         </div>
 
-        <hr class="side-divider">
-
-        <div class="theme-toggle" role="group" aria-label="Theme switcher" style="margin-bottom: 1.5rem;">
-            <button type="button" class="theme-btn" data-theme-choice="light" aria-label="Light theme" title="Light">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line></svg>
-            </button>
-            <button type="button" class="theme-btn" data-theme-choice="dark" aria-label="Dark theme" title="Dark">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
+        <div class="side-status-widget">
+            <span class="side-status-label">CURRENT STATUS</span>
+            <div class="side-status-value">
+                <span class="status-dot"></span>
+                Building BetterObando
+            </div>
         </div>
 
-        <div class="side-contact">
-            <p>For inquiries and everything, message me at</p>
-            <a href="mailto:migzcayetano23@gmail.com">
-                <svg class="email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                migzcayetano23@gmail.com
-            </a>
+        <div class="side-footer-row">
+            <div class="theme-toggle" role="group" aria-label="Theme switcher">
+                <button type="button" class="theme-btn" data-theme-choice="light" aria-label="Light theme" title="Light">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line></svg>
+                </button>
+                <button type="button" class="theme-btn" data-theme-choice="dark" aria-label="Dark theme" title="Dark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+            </div>
+            
+            <div class="side-footer-icons">
+                <a href="https://github.com/MigzAndroidz" target="_blank" class="theme-btn" title="GitHub">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="mailto:migzcayetano23@gmail.com" class="theme-btn" title="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -197,7 +224,6 @@
             </div>
         </section>
 
-        <!-- UPDATED CERTIFICATIONS SECTION: Only shows top 6 on main page -->
         <section class="certifications-section">
             <div class="section-header">
                 <h2 class="section-title">02 — certifications</h2>
@@ -205,7 +231,6 @@
             </div>
             
             <div class="cert-grid">
-                <!-- 1. Machine Learning -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
                         <img src="aws.svg" alt="AWS Logo" class="cert-icon-img theme-icon">
@@ -215,7 +240,6 @@
                     <a href="https://www.credly.com/badges/5715c903-9d5e-4704-b969-32db41f8b841" target="_blank" class="cert-verify">⟨ VERIFY ⟩</a>
                 </div>
                 
-                <!-- 2. Google Cloud Fundamentals -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
                         <img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="Google Cloud Logo" class="cert-icon-img">
@@ -225,7 +249,6 @@
                     <a href="https://www.coursera.org/account/accomplishments/verify/FAIEZA82VFKM" target="_blank" class="cert-verify">⟨ VERIFY ⟩</a>
                 </div>
 
-                <!-- 3. Intro to Generative AI -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
                         <img src="aws.svg" alt="AWS Logo" class="cert-icon-img theme-icon">
@@ -235,7 +258,6 @@
                     <a href="https://www.credly.com/earner/earned/badge/883fade1-041a-497a-897a-f495cc6ed77a" target="_blank" class="cert-verify">⟨ VERIFY ⟩</a>
                 </div>
                 
-                <!-- 4. AI Fundamentals -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
                         <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google Logo" class="cert-icon-img">
@@ -245,7 +267,6 @@
                     <a href="https://coursera.org/share/70abc2296c00aaa919c2978ad4418923" target="_blank" class="cert-verify">⟨ VERIFY ⟩</a>
                 </div>
 
-                <!-- 5. Programming with JavaScript -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
                         <img src="https://cdn.simpleicons.org/meta/0467DF" alt="Meta Logo" class="cert-icon-img">
@@ -255,7 +276,6 @@
                     <a href="https://coursera.org/share/5c1b2dfcb91769cc8a3e4e6799c8c1bf" target="_blank" class="cert-verify">⟨ VERIFY ⟩</a>
                 </div>
 
-                <!-- 6. Foundation of Project Management -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
                         <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google Logo" class="cert-icon-img">
